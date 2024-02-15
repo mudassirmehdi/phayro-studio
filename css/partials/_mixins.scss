@@ -1,0 +1,124 @@
+@mixin global-font {
+    @include font-format(16px);
+    font-family: $font-family-base;
+    font-weight: $fw-regular;
+    color: $body-color;
+}
+
+@mixin font-format($size, $lh: 1.5) {
+    font-size: $size;
+    line-height: $lh;
+}
+
+@mixin transition-standard {
+    transition: all .4s ease-out;
+    transition-timing-function: cubic-bezier(0.400, 0.000, 0.200, 1.000);
+}
+
+@mixin media-breakpoint-up-custom($custom_breakpoint) {
+    @media only screen and (min-width: $custom_breakpoint) {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-down-custom($custom_breakpoint) {
+    @media only screen and (max-width: $custom_breakpoint) {
+        @content;
+    }
+}
+
+$breakpoints-up: (
+    "sm": "min-width: 576px",
+    "md": "min-width: 768px",
+    "lg": "min-width: 992px",
+    "xl": "min-width: 1200px",
+    "xxl": "min-width: 1400px",
+    "3xl": "min-width: 1600px",
+    "4xl": "min-width: 1800px",
+);
+
+@mixin media-breakpoint-up($user-value) {
+    $my-map: map-get($breakpoints-up, $user-value);
+
+    @if $my-map {
+        @media (#{$my-map}) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "Opps, seems like the breakpoint is missing ";
+    }
+}
+
+$breakpoints-down: (
+    "xs": "max-width: 480.98px",
+    "sm": "max-width: 575.98px",
+    "md": "max-width: 767.98px",
+    "lg": "max-width: 991.98px",
+    "xl": "max-width: 1199.98px",
+    "xxl": "max-width: 1399.98px",
+    "xxxl": "max-width: 1599.98px",
+    "xxxxl": "max-width: 1799.98px",
+);
+
+@mixin media-breakpoint-down($user-value) {
+    $my-map: map-get($breakpoints-down, $user-value);
+
+    @if $my-map {
+        @media (#{$my-map}) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "Opps, seems like the breakpoint is missing ";
+    }
+}
+
+@mixin media-breakpoint-up-custom($custom_breakpoint) {
+    @media only screen and (min-width: $custom_breakpoint) {
+        @content;
+    }
+}
+
+@mixin primaryBtn {
+    @include transition-standard;
+    @include font-format(20px, 1.2);
+    min-height: 60px;
+    min-width: 200px;
+    font-family: $font-family-base;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 6px;
+    border: 1.07px solid #FFF;
+    background: rgba(217, 217, 217, 0.10);
+    backdrop-filter: blur(0px);
+    padding: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include media-breakpoint-down(xl) {
+        @include font-format(16px, 1.2);
+    }
+
+    @include media-breakpoint-down(lg) {
+        min-height: 50px;
+        min-width: 170px;
+    }
+
+    &:hover,
+    &:focus {
+        color: #FF9826;
+        border-radius: 5px;
+        border: 0.5px solid #FF9826;
+        background: linear-gradient(94deg, #FF9826 0%, rgba(255, 152, 38, 0.10) 0.01%, rgba(255, 152, 38, 0.00) 49.5%, rgba(255, 152, 38, 0.10) 100%);
+        mix-blend-mode: screen;
+    }
+
+
+}

@@ -1,0 +1,184 @@
+.slider-sec {
+    overflow-x: hidden;
+
+    @include media-breakpoint-down(lg) {
+        min-height: auto;
+    }
+
+    .inner {
+        padding: 50px 0 0;
+        align-items: unset;
+
+        @include media-breakpoint-down(xxxl) {
+            padding: 50px 0 0;
+        }
+
+        @include media-breakpoint-down(lg) {
+            padding: 130px 0 100px;
+            min-height: auto;
+        }
+    }
+
+    .slider-wrapper {
+        width: 100%;
+        position: relative;
+
+    }
+
+    .pagination-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: fit-content;
+
+        @include media-breakpoint-down(lg) {
+            gap: 0px;
+        }
+
+        span {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background-color: #FFF;
+            opacity: 0.7;
+
+            @include media-breakpoint-down(lg) {
+                width: 25px;
+                height: 25px;
+            }
+
+            &.swiper-pagination-bullet-active {
+                opacity: 1;
+                box-shadow: 0px 0px 10px 0px #FFF;
+            }
+        }
+    }
+
+    .slider-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        width: fit-content;
+        position: absolute;
+        bottom: 160px;
+        z-index: 999;
+        left: 15%;
+        transform: translateX(-20%);
+
+        
+
+        @include media-breakpoint-down(lg) {
+            top: -65px;
+            bottom: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            gap: 15px;
+        }
+
+        .arrows {
+            display: flex;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+
+            @include media-breakpoint-down(lg) {
+                width: 25px;
+                height: 25px;
+            }
+
+            i {
+                font-size: 16px;
+                line-height: 1.2;
+                color: #fff;
+
+                @include media-breakpoint-down(lg) {
+                    font-size: 14px;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                border-color: $brand-primary;
+
+                i {
+                    color: $brand-primary;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .swiper-slide.swiper-slide-active {
+            transform: scale(1.1);
+            position: relative;
+            z-index: 3;
+
+            @include media-breakpoint-down(xs) {
+                transform: none;
+            }
+
+            .slide-cutom {
+                filter: none;
+            }
+        }
+    }
+
+    .slide-cutom {
+        height: 100%;
+        @include media-breakpoint-down(lg) {
+            border-radius: 10px;
+            border: 2px solid #FFF;
+            box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.60);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.10);
+            backdrop-filter: blur(16.299999237060547px);
+            filter: blur(3px);
+            padding: 15px;
+        }
+
+        .row {
+            align-items: center;
+                height: 100%;
+
+            @include media-breakpoint-down(lg) {
+                flex-direction: column-reverse !important;
+            }
+
+            .details {
+                max-width: 500px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .image {
+                display: flex;
+                margin-top: auto;
+                justify-content: flex-end;
+                align-items: flex-end;
+                max-width: 980px;
+                width: 100%;
+                margin-left: auto;
+                min-height: calc(100vh - 50px);
+
+                @include media-breakpoint-down(lg) {
+                    max-width: 300px;
+                    min-height: auto;
+                    margin: 0 auto 15px auto;
+                }
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    margin-left: auto;
+                    max-height: 640px;
+                    overflow: initial;
+                }
+            }
+        }
+    }
+}

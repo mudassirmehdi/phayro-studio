@@ -1,0 +1,1512 @@
+.home-hero {
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .inner {
+        width: 100%;
+        min-height: 100vh;
+        padding: 100px 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .logo-image {
+            max-width: 360px;
+            width: 100%;
+            object-fit: contain;
+            filter: hue-rotate(45deg);
+            opacity: 0.2;
+
+            @include media-breakpoint-down(xxxl) {
+                max-width: 280px;
+            }
+
+        }
+
+        .head {
+
+            &.about-cta {
+                max-width: 540px;
+                width: 100%;
+                margin-left: auto;
+                margin-right: 30px;
+                margin-top: auto;
+
+                @include media-breakpoint-down(lg) {
+                    max-width: 500px;
+                }
+            }
+
+            &.centered-head {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                flex-direction: column;
+
+                p {
+                    font-size: 14px;
+                    line-height: 1.2;
+
+                    &:has(i) {
+                        margin-top: auto;
+                        margin-bottom: 0;
+                    }
+
+                    strong {
+                        font-size: 20px;
+                    }
+
+                    i {
+                        strong {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.brand-sec {
+
+        .container-fluid {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+            background-color: transparent;
+            opacity: 0.9;
+            position: relative;
+            z-index: 0;
+
+            @include media-breakpoint-down(xl) {
+                background-size: inherit;
+            }
+        }
+    }
+
+    &.contact-us {
+
+        @include media-breakpoint-down(lg) {
+            background-color: #9747FF;
+            background-blend-mode: multiply;
+        }
+
+        .inner {
+            width: 100%;
+            min-height: 100vh;
+            padding: 0;
+            height: 100%;
+            display: block;
+            overflow: hidden;
+        }
+
+        .container-fluid {
+
+            @include media-breakpoint-down(lg) {
+                padding: 0;
+            }
+        }
+
+        .details {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            padding: 0 100px 150PX 0;
+            align-items: flex-end;
+            justify-content: flex-end;
+            text-align: end;
+
+            @include media-breakpoint-down(xxxl) {
+                padding: 0 80px 150PX 0;
+            }
+
+            @include media-breakpoint-down(lg) {
+                padding: 0 0 30px 0;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        .inner {
+
+            &>.row {
+                min-height: 100vh;
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: 50% 100%;
+
+                @include media-breakpoint-down(xxxl) {
+                    background-size: 65% 100%;
+                }
+
+                @include media-breakpoint-down(xxl) {
+                    background-size: 68% 100%;
+                }
+
+                @include media-breakpoint-down(lg) {
+                    flex-direction: column-reverse !important;
+                    background-size: 140% 100%;
+                    padding: 140px 25px 50px 25px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    padding: 140px 15px 50px 15px;
+                }
+            }
+        }
+
+        .head {
+            padding-right: 20px;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 2px;
+                height: 200%;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 3.79%, #FF9826 52.76%, rgba(255, 255, 255, 0.00) 97.07%);
+
+                @include media-breakpoint-down(lg) {
+                    content: none;
+                }
+            }
+        }
+
+        .form-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 120px;
+            height: 100%;
+
+            @include media-breakpoint-down(lg) {
+                padding-top: 0;
+            }
+
+            form {
+                max-width: 515px;
+                width: 100%;
+
+                .form-label {
+                    @include global-font;
+                    @include font-format(20px, 1.2);
+                    color: #FFF;
+                    font-weight: 300;
+                    letter-spacing: 1.6px;
+
+                    @include media-breakpoint-down(xl) {
+                        @include font-format(18px, 1.2);
+                    }
+    
+                    @include media-breakpoint-down(md) {
+                        @include font-format(16px, 1.2);
+                    }
+    
+                    @include media-breakpoint-down(sm) {
+                        @include font-format(14px, 1.2);
+                    }
+                }
+
+                .form-control {
+                    background: linear-gradient(95deg, rgba(240, 240, 240, 0.20) -31.16%, rgba(240, 240, 240, 0.10) 48.88%, rgba(240, 240, 240, 0.20) 125.47%);
+                    @include global-font;
+                    @include font-format(20px, 1.2);
+                    color: #FFF;
+                    font-weight: 300;
+                    letter-spacing: 1.6px;
+
+                    @include media-breakpoint-down(xl) {
+                        @include font-format(18px, 1.2);
+                    }
+    
+                    @include media-breakpoint-down(md) {
+                        @include font-format(16px, 1.2);
+                    }
+    
+                    @include media-breakpoint-down(sm) {
+                        @include font-format(14px, 1.2);
+                    }
+
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                        background-color: linear-gradient(95deg, rgba(240, 240, 240, 0.20) -31.16%, rgba(240, 240, 240, 0.10) 48.88%, rgba(240, 240, 240, 0.20) 125.47%);
+                        border: 1px solid #FFF;
+                    }
+                }
+
+                .btn {
+                    width: fit-content;
+                }
+            }
+        }
+    }
+
+    &.service-hero {
+
+        .inner {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            padding: 70px 40px 50px 40px;
+
+            .hero-heading {
+                width: 100%;
+
+                h1 {
+                    @include global-font;
+                    @include font-format(170px, 1.2);
+                    color: rgba(255, 255, 255, 0.6);
+                    -webkit-text-stroke-width: 1;
+                    -webkit-text-stroke-color: #000;
+                    font-weight: 500;
+                    letter-spacing: -6.8px;
+                    max-width: 1300px;
+                    width: 100%;
+                    margin: 0;
+
+                    @include media-breakpoint-down(xl) {
+                        @include font-format(110px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        @include font-format(98px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        @include font-format(70px, 1.2);
+                        letter-spacing: -2.8px;
+                        text-align: center;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        @include font-format(54px, 1.2);
+                    }
+                }
+
+                padding-bottom: 50px;
+                position: relative;
+
+                @include media-breakpoint-down(md) {
+                    padding-bottom: 20px;
+                }
+
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 3.79%, #FF9826 52.76%, rgba(255, 255, 255, 0.00) 97.07%);
+                }
+            }
+
+            .description {
+                padding-top: 50px;
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+
+                @include media-breakpoint-down(md) {
+                    padding-top: 20px;
+                    text-align: center;
+                }
+
+                p {
+                    max-width: 515px;
+                    width: 100%;
+                    @include global-font;
+                    @include font-format(20px, 1.2);
+                    color: #FFF;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+
+                    @include media-breakpoint-down(md) {
+                        text-align: center;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        @include font-format(16px, 1.2);
+                    }
+                }
+            }
+        }
+    }
+
+    &.service-cards {
+
+
+        .inner {
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 40px 50px 40px;
+
+            @include media-breakpoint-down(lg) {
+                padding: 80px 0px 50px 0px;
+            }
+        }
+
+        .cards-head {
+            width: 100%;
+            @include global-font;
+            @include font-format(96px, 1.2);
+            color: rgba(255, 255, 255, 0.6);
+            -webkit-text-stroke-width: 1;
+            -webkit-text-stroke-color: #000;
+            font-weight: 500;
+            letter-spacing: -3.84px;
+            width: 100%;
+            margin: 0 0 30px 0;
+
+            @include media-breakpoint-down(xl) {
+                @include font-format(65px, 1.2);
+            }
+
+            @include media-breakpoint-down(lg) {
+                @include font-format(56px, 1.2);
+            }
+
+            @include media-breakpoint-down(md) {
+                @include font-format(44px, 1.2);
+                letter-spacing: -0.5px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                @include font-format(38px, 1.2);
+                letter-spacing: -0.5px;
+            }
+        }
+
+        .cards {
+            width: 100%;
+
+            .card {
+                width: 100%;
+                min-height: 570px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                border-radius: 10px;
+                border: 1px solid #FFF;
+                background-color: rgba(255, 255, 255, 0.40);
+                box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.60);
+                padding: 50px 30px;
+
+                @include media-breakpoint-down(xxl) {
+                    padding: 50px 20px;
+                    min-height: 370px;
+                }
+
+                @include media-breakpoint-down(lg) {
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    min-height: auto;
+                    background-image: none !important;
+                    padding: 12px 20px;
+
+                    img {
+                        width: 80px;
+                        min-width: 80px;
+                        object-fit: cover;
+                        height: 80px;
+                        border-radius: 50%;
+                        background-color: #D9D9D9;
+                        backdrop-filter: blur(5px);
+                    }
+                }
+
+                h3 {
+                    @include global-font;
+                    @include font-format(64px, 1.2);
+                    color: #FFF;
+                    font-style: normal;
+                    font-weight: 700;
+                    letter-spacing: -2.56px;
+                    margin: 0;
+
+                    @include media-breakpoint-down(xxl) {
+                        @include font-format(44px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        @include font-format(36px, 1.2);
+                        letter-spacing: -1px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        @include font-format(26px, 1.2);
+                    }
+                }
+            }
+        }
+    }
+
+    &.about-hero {
+
+        .inner {
+            align-items: center;
+            text-align: left;
+            padding: 70px 40px 50px 40px;
+
+            @include media-breakpoint-down(xl) {
+                flex-direction: column;
+            }
+
+            @include media-breakpoint-down(md) {
+                padding: 70px 0px 50px 0px;
+            }
+
+            .hero-heading {
+                width: 100%;
+
+                h1 {
+                    @include global-font;
+                    @include font-format(170px, 1.2);
+                    color: #fff;
+                    -webkit-text-stroke-width: 1;
+                    -webkit-text-stroke-color: #000;
+                    font-weight: 500;
+                    letter-spacing: -6.8px;
+                    max-width: 1300px;
+                    width: 100%;
+                    margin: 0;
+
+                    @include media-breakpoint-down(xxl) {
+                        @include font-format(140px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(xl) {
+                        @include font-format(110px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        @include font-format(95px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        @include font-format(70px, 1.2);
+                        letter-spacing: -2.8px;
+                        text-align: center;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        @include font-format(44px, 1.2);
+                        letter-spacing: -1px;
+                    }
+                }
+            }
+
+            .description {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                flex-direction: column;
+                width: 100%;
+
+                @include media-breakpoint-down(md) {
+                    margin-top: 20px;
+                }
+
+                p {
+                    max-width: 515px;
+                    width: 100%;
+                    @include global-font;
+                    @include font-format(20px, 1.2);
+                    color: #FFF;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+
+                    @include media-breakpoint-down(md) {
+                        @include font-format(18px, 1.2);
+                        text-align: center;
+                        max-width: 100%;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        @include font-format(16px, 1.2);
+                    }
+                }
+            }
+        }
+    }
+
+    &.brand-history {
+        .inner {
+            align-items: flex-start;
+            padding: 25px 40px 0 40px;
+
+            @include media-breakpoint-down(lg) {
+                padding: 25px 0px 0 0px;
+            }
+        }
+
+        .row {
+            width: 100%;
+            min-height: 90vh;
+            padding: 50px 0 45px 0;
+        }
+
+        .details {
+            width: 100%;
+            display: flex;
+            height: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+
+            h2 {
+                @include global-font;
+                @include font-format(96px, 1.2);
+                color: rgba(255, 255, 255, 0.6);
+                -webkit-text-stroke-width: 1;
+                -webkit-text-stroke-color: #000;
+                font-weight: 500;
+                letter-spacing: -3px;
+                max-width: 1300px;
+                width: 100%;
+                margin: 0;
+
+                @include media-breakpoint-down(xl) {
+                    @include font-format(75px, 1.2);
+                }
+
+                @include media-breakpoint-down(lg) {
+                    @include font-format(65px, 1.2);
+                    margin-bottom: 15px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    @include font-format(44px, 1.2);
+                    letter-spacing: -2.8px;
+                    text-align: center;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    @include font-format(42px, 1.2);
+                    letter-spacing: -1px;
+                }
+            }
+
+            p {
+                @include global-font;
+                @include font-format(20px, 1.2);
+                color: #FFF;
+                font-style: normal;
+                font-weight: 500;
+                letter-spacing: 1px;
+
+                @include media-breakpoint-down(xl) {
+                    @include font-format(18px, 1.2);
+                }
+
+                @include media-breakpoint-down(md) {
+                    @include font-format(16px, 1.2);
+                    text-align: center;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    @include font-format(14px, 1.2);
+                }
+            }
+        }
+
+        .history {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 30px;
+            height: 100%;
+            width: 100%;
+
+            .logo {
+                min-width: 250px;
+                max-width: 250px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                    height: 300px;
+                }
+            }
+
+            .tab-content>.active {
+                display: block;
+                height: 100%;
+            }
+
+            .tab-content {
+                height: 100%;
+            }
+
+
+            .years {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 15px;
+                width: 100%;
+                max-width: 500px;
+                border-bottom: none;
+
+                .year {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 15px;
+                    opacity: 0.6;
+
+                    @include media-breakpoint-down(xs) {
+                        gap: 10px;
+                    }
+
+                    p {
+                        @include global-font;
+                        @include font-format(20px, 1.2);
+                        color: #FFF;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        margin: 0;
+
+                        @include media-breakpoint-down(xs) {
+                            @include font-format(16px, 1.2);
+                        }
+                    }
+
+                    .circle {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        border: 1px solid #fff;
+                    }
+
+                    img {
+                        max-height: 82px;
+                        width: 100%;
+                        object-fit: contain;
+
+                        @include media-breakpoint-down(xs) {
+                            max-height: 55px;
+                        }
+                    }
+                }
+
+                &.nav-tabs .nav-link {
+
+                    &.active {
+                        color: inherit;
+                        background-color: transparent;
+                        border-color: transparent;
+
+                        .year {
+                            opacity: 1;
+
+                            .circle {
+                                background-color: #FFF;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+
+        &.markie {
+
+            marquee {
+                @include global-font;
+                @include font-format(96px, 1.2);
+                color: #FFF;
+                -webkit-text-stroke-width: 1;
+                -webkit-text-stroke-color: #000;
+                font-style: normal;
+                font-weight: 500;
+                letter-spacing: -3.84px;
+
+                @include media-breakpoint-down(xl) {
+                    @include font-format(80px, 1.2);
+                }
+
+                @include media-breakpoint-down(lg) {
+                    @include font-format(65px, 1.2);
+                }
+
+                @include media-breakpoint-down(md) {
+                    @include font-format(48px, 1.2);
+                    letter-spacing: -1px
+                }
+
+                @include media-breakpoint-down(sm) {
+                    @include font-format(42px, 1.2);
+                }
+
+                span {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: $brand-primary;
+                    display: inline-flex;
+                    margin-bottom: 12px;
+
+                    @include media-breakpoint-down(lg) {
+                        width: 30px;
+                        height: 30px;
+                        margin-bottom: 8px;
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        width: 22px;
+                        height: 22px;
+                        margin-bottom: 5px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        width: 18px;
+                        height: 18px;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+
+            .inner {
+                flex-direction: column;
+                justify-content: space-between;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .details-sec {
+                padding: 100px 40px 100px 60px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 100%;
+                border-radius: 10px;
+                border: 1px solid #FF9826;
+                background: rgba(255, 255, 255, 0.20);
+                box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.60);
+
+                @include media-breakpoint-down(lg) {
+                    padding: 50px 20px 50px 20px;
+                }
+
+
+
+                .description-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 15px;
+
+                    @include media-breakpoint-down(md) {
+                        flex-direction: column;
+                    }
+
+                    p {
+                        @include global-font;
+                        @include font-format(20px, 1.2);
+                        color: #FFF;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                        max-width: 580px;
+                        width: 100%;
+                        margin: 0;
+
+                        @include media-breakpoint-down(xl) {
+                            @include font-format(18px, 1.2);
+                        }
+
+                        @include media-breakpoint-down(lg) {
+                            @include font-format(16px, 1.2);
+                        }
+
+                        @include media-breakpoint-down(md) {
+                            max-width: 100%;
+                            @include font-format(14px, 1.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.our-team {
+        overflow: hidden;
+
+        .inner {
+            padding-bottom: 100px;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding-left: 100px;
+
+            @include media-breakpoint-down(lg) {
+                padding-left: 0;
+            }
+
+            .our-tam-details {
+                max-width: 700px;
+                width: 100%;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 150vh;
+                    position: absolute;
+                    border-radius: 10px;
+                    border: 1px solid #FFF;
+                    background: rgba(255, 255, 255, 0.20);
+                    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.60);
+                    z-index: 1;
+                    top: 0%;
+                    transform: translateY(-40%) rotate(340deg);
+                    left: -115px;
+
+                    @include media-breakpoint-down(lg) {
+                        transform: translateY(-30%) rotate(300deg);
+                        left: 25px;
+                    }
+                }
+
+                h2 {
+                    @include global-font;
+                    @include font-format(96px, 1.2);
+                    color: rgba(255, 255, 255, 0.6);
+                    -webkit-text-stroke-width: 1;
+                    -webkit-text-stroke-color: #000;
+                    text-transform: uppercase;
+                    font-style: normal;
+                    font-weight: 500;
+                    letter-spacing: -3.84px;
+                    position: relative;
+                    z-index: 2;
+
+                    @include media-breakpoint-down(xl) {
+                        @include font-format(80px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        @include font-format(65px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        @include font-format(48px, 1.2);
+                        letter-spacing: -1px
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        @include font-format(42px, 1.2);
+                    }
+                }
+
+                p {
+                    @include global-font;
+                    @include font-format(20px, 1.2);
+                    color: #FFF;
+                    font-style: normal;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    max-width: 580px;
+                    position: relative;
+                    z-index: 2;
+
+                    @include media-breakpoint-down(xl) {
+                        @include font-format(18px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        @include font-format(16px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        max-width: 100%;
+                        @include font-format(14px, 1.2);
+                    }
+                }
+
+                span {
+                    @include global-font;
+                    @include font-format(20px, 1.2);
+                    color: #FF9826;
+                    font-style: italic;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    position: relative;
+                    z-index: 2;
+
+                    @include media-breakpoint-down(xl) {
+                        @include font-format(18px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        @include font-format(16px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        max-width: 100%;
+                        @include font-format(14px, 1.2);
+                    }
+                }
+            }
+        }
+    }
+
+    &.portfolio-sec {
+
+        .inner {
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 0;
+        }
+
+        .portfolio-head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding-bottom: 50px;
+
+            @include media-breakpoint-down(md) {
+                flex-wrap: wrap;
+            }
+
+            h1 {
+                @include global-font;
+                @include font-format(70px, 1.2);
+                color: rgba(255, 255, 255, 0.6);
+                -webkit-text-stroke-width: 1;
+                -webkit-text-stroke-color: #000;
+                text-transform: uppercase;
+                font-style: normal;
+                font-weight: 500;
+                letter-spacing: -3.84px;
+                padding-right: 50px;
+                position: relative;
+
+                @include media-breakpoint-down(xl) {
+                    @include font-format(58px, 1.2);
+                    padding-right: 40px;
+                }
+
+                @include media-breakpoint-down(lg) {
+                    @include font-format(48px, 1.2);
+                    padding-right: 30px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    @include font-format(32px, 1.2);
+                    padding-right: 15px;
+                    letter-spacing: -1px;
+                    text-wrap: nowrap;
+                }
+
+                @include media-breakpoint-down(md) {
+                    @include font-format(30px, 1.2);
+                }
+                
+
+                &::after {
+                    content: '';
+                    width: 3px;
+                    height: 150%;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(345deg);
+                    background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 3.79%, #FF9826 52.76%, rgba(255, 255, 255, 0.00) 97.07%);
+                }
+            }
+
+            h2 {
+                @include global-font;
+                @include font-format(45px, 1.2);
+                color: rgba(255, 255, 255, 0.6);
+                -webkit-text-stroke-width: 1;
+                -webkit-text-stroke-color: #000;
+                text-transform: uppercase;
+                font-style: normal;
+                font-weight: 500;
+                letter-spacing: -3.84px;
+                padding-left: 50px;
+
+                @include media-breakpoint-down(xl) {
+                    @include font-format(40px, 1.2);
+                    padding-left: 40px;
+                }
+
+                @include media-breakpoint-down(lg) {
+                    @include font-format(34px, 1.2);
+                    padding-left: 30px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    @include font-format(28px, 1.2);
+                    padding-left: 15px;
+                    letter-spacing: -1px;
+                    text-wrap: nowrap;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    @include font-format(24px, 1.2);
+                }
+
+                &.colored {
+                    color: #FF9826;
+                }
+            }
+        }
+
+        .product {
+            width: 100%;
+            margin: 0 0 50px 0;
+            padding: 35px 40px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+
+
+            .product-head {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+
+                h2 {
+                    @include global-font;
+                    @include font-format(80px, 1.2);
+                    color: rgba(255, 255, 255, 0.80);
+                    font-style: normal;
+                    font-weight: 500;
+                    letter-spacing: -3.2px;
+
+                    @include media-breakpoint-down(lg) {
+                        @include font-format(65px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        @include font-format(48px, 1.2);
+                        letter-spacing: -1px
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        @include font-format(42px, 1.2);
+                    }
+                }
+
+                p {
+                    @include global-font;
+                    @include font-format(20px, 1.2);
+                    color: #FFF;
+                    font-style: normal;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+
+                    @include media-breakpoint-down(xl) {
+                        @include font-format(18px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        @include font-format(16px, 1.2);
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        @include font-format(14px, 1.2);
+                    }
+                }
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                filter: brightness(2);
+
+                h2 {
+                    color: #FF9826;
+                }
+            }
+        }
+    }
+
+    &.product-inner {
+
+        &:has(.video-wrapper) {
+
+            @include media-breakpoint-down(lg) {
+                min-height: auto;
+            }
+        }
+
+        .inner {
+            padding: 65px 40px 0px 40px;
+
+            @include media-breakpoint-down(lg) {
+                padding: 65px 0 50px 0;
+            }
+
+            &:has(.video-wrapper) {
+
+                @include media-breakpoint-down(lg) {
+                    min-height: auto;
+                }
+            }
+        }
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $brand-primary;
+            display: inline-flex;
+            margin-bottom: 12px;
+        }
+
+        &.gradient-sec-wrapper {
+            .inner {
+                padding: 75px 0px 30px 0px;
+                flex-direction: unset;
+                align-items: unset;
+
+                @include media-breakpoint-down(lg) {
+                    padding: 50px 0px 30px 0px;
+                }
+            }
+
+            .container-fluid {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .gradient-sec {
+                border-radius: 10px;
+                border: 1px solid #FF9826;
+                background: rgba(255, 255, 255, 0.20);
+                box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.60);
+                width: 100%;
+                padding: 30px 60px;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: space-between;
+
+                @include media-breakpoint-down(lg) {
+                    padding: 30px 25px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    padding: 30px 15px;
+                }
+            }
+
+            .circle-wrapper {
+                max-width: 1175px;
+                width: 100%;
+                margin-left: auto;
+
+            }
+
+            .details-sec {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 100%;
+
+                .description-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 15px;
+
+                    @include media-breakpoint-down(md) {
+                        flex-direction: column;
+                    }
+
+                    p {
+                        @include global-font;
+                        @include font-format(20px, 1.2);
+                        color: #FFF;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                        max-width: 580px;
+                        width: 100%;
+
+                        @include media-breakpoint-down(xl) {
+                            @include font-format(18px, 1.2);
+                        }
+
+                        @include media-breakpoint-down(lg) {
+                            @include font-format(16px, 1.2);
+                        }
+
+                        @include media-breakpoint-down(md) {
+                            max-width: 100%;
+                            @include font-format(14px, 1.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.markie-gallery {
+        .inner {
+            flex-direction: center;
+            padding: 70px 0 30px 0;
+
+            @include media-breakpoint-down(xl) {
+                padding-top: 100px;
+            }
+
+            .gallery {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                position: relative;
+                height: fit-content;
+            }
+        }
+
+        marquee {
+            @include global-font;
+            @include font-format(96px, 1.2);
+            color: #FFF;
+            -webkit-text-stroke-width: 1;
+            -webkit-text-stroke-color: #000;
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: -3.84px;
+            position: absolute;
+            left: 0;
+
+            @include media-breakpoint-down(xl) {
+                @include font-format(80px, 1.2);
+            }
+
+            @include media-breakpoint-down(lg) {
+                @include font-format(65px, 1.2);
+            }
+
+            @include media-breakpoint-down(md) {
+                @include font-format(48px, 1.2);
+                letter-spacing: -1px
+            }
+
+            @include media-breakpoint-down(sm) {
+                @include font-format(42px, 1.2);
+            }
+
+            span {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: $brand-primary;
+                display: inline-flex;
+                margin-bottom: 12px;
+
+                @include media-breakpoint-down(lg) {
+                    width: 30px;
+                    height: 30px;
+                    margin-bottom: 8px;
+                }
+
+                @include media-breakpoint-down(md) {
+                    width: 22px;
+                    height: 22px;
+                    margin-bottom: 5px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    width: 18px;
+                    height: 18px;
+                    margin-bottom: 8px;
+                }
+            }
+
+            &.top-markei {
+                top: -60px;
+
+                @include media-breakpoint-down(md) {
+                    top: -27px;
+                }
+            }
+
+            &.bottom-markei {
+                bottom: -60px;
+
+                @include media-breakpoint-down(md) {
+                    bottom: -27px;
+                }
+            }
+        }
+
+        .gallery-wrapper {
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                overflow: hidden;
+                object-fit: cover;
+                max-height: 260px;
+
+                @include media-breakpoint-down(xl) {
+                    max-height: 190px;
+                }
+            }
+        }
+    }
+
+    &.product-cta-sec {
+        position: relative;
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+            z-index: 1;
+        }
+
+        .inner {
+            position: relative;
+            z-index: 2;
+
+            @include media-breakpoint-down(lg) {
+                padding: 50px 0;
+            }
+
+            .head {
+
+                p {
+
+                    .colored {
+                        color: #FF9826;
+                    }
+                }
+            }
+        }
+    }
+
+    &.innovation {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-color: #9747FF;
+        background-blend-mode: multiply;
+
+        .container-fluid {
+            backdrop-filter: blur(5.550000190734863px);
+        }
+    }
+}
+
+
+.slider-gallery {
+    .container-fluid {
+        position: relative;
+        z-index: 0;
+
+        marquee {
+            z-index: 3;
+            display: none; 
+
+            @include media-breakpoint-down(sm) {
+                display: block;
+            }
+        }
+
+        .slider-navigation {
+            position: absolute;
+            left: 50%;
+            bottom: 45px;
+            z-index: 3;
+            gap: 15px;
+            transform: translateX(-50%);
+            display: none;
+
+            @include media-breakpoint-down(sm) {
+                display: flex;
+            }
+
+            .arrows {
+                display: flex;
+                width: 35px;
+                height: 35px;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                i {
+                    font-size: 16px;
+                    line-height: 1.2;
+                    color: #fff;
+    
+                    @include media-breakpoint-down(lg) {
+                        font-size: 14px;
+                    }
+                }
+    
+                &:hover,
+                &:focus {
+                    border-color: $brand-primary;
+    
+                    i {
+                        color: $brand-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    .slider-gallery-wrapper.swiper {
+        .slider-gellery-image {
+            width: 100%;
+            position: relative;
+
+            img {
+                position: relative;
+                z-index: 0;
+
+                @include media-breakpoint-down(sm) {
+                    min-height: 420px;
+                    max-height: 420px;
+                    object-fit: cover;
+                }
+            }
+
+            .overlay {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: linear-gradient(169deg, rgba(151, 71, 255, 0.60) 0%, rgba(107, 12, 66, 0.60) 100%);
+                z-index: 1;
+            }
+        }
+    }
+}

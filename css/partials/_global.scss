@@ -1,0 +1,30 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$headings-font-family: 'Roboto Condensed', sans-serif;
+$font-family-secondary: 'Roboto Condensed', sans-serif;
+$font-family-base  : 'Roboto Condensed', sans-serif;
+
+
+// Colors
+$body-color: #000;
+$brand-primary:  #FF9826;
+$brand-secondary: $brand-primary;
+$btn-hover: lighten($brand-primary, 5);
+$link-color: $brand-primary;
+$link-hover: darken($brand-primary, 20);
+$fill-grey-light: #f4f4f4;
+$fill-grey-v2: #555555;
+
+$fill-black-v1: #09302B;
+
+$fill-aqua-cyan: #EBF8F5;
+
+/* Font Weights for Google Fonts */
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+$fw-black: 900;

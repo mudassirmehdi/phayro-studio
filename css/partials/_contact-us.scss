@@ -1,0 +1,158 @@
+.contact-us-page {
+
+    
+
+    .form-wrapper {
+        flex-direction: column;
+    }
+
+    .big-heading {
+        width: 100%;
+        text-align: left;
+        @include global-font;
+        @include font-format(70px, 1.2);
+        color: rgba(255, 255, 255, 0.6);
+        -webkit-text-stroke-width: 1;
+        -webkit-text-stroke-color: #000;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: -3.84px;
+
+        @include media-breakpoint-down(xl) {
+            @include font-format(80px, 1.2);
+        }
+
+        @include media-breakpoint-down(lg) {
+            @include font-format(65px, 1.2);
+        }
+
+        @include media-breakpoint-down(md) {
+            @include font-format(48px, 1.2);
+            letter-spacing: -1px
+        }
+
+        @include media-breakpoint-down(sm) {
+            @include font-format(42px, 1.2);
+        }
+    }
+
+    .home-hero.contact-us {
+
+        .details {
+            padding: 0 40px 50PX 0;
+        }
+
+        .head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            flex-direction: column;
+
+            &::after {
+                content: none;
+            }
+
+            p {
+                font-weight: 300;
+
+                i {
+                    color: $brand-primary;
+                    font-weight: 400;
+                }
+            }
+
+            .contact-details {
+                max-width: 360px;
+                width: 100%;
+                background-color: #fff;
+                padding: 20px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+                text-align: left;
+                margin-bottom: 20px;
+
+                span {
+
+                    strong {
+                        @include global-font;
+                        @include font-format(30px, 1.2);
+                        font-weight: 700;
+                        color: #B23232;
+
+                        @include media-breakpoint-down(xl) {
+                            @include font-format(28px, 1.2);
+                        }
+        
+                        @include media-breakpoint-down(md) {
+                            @include font-format(24px, 1.2);
+                        }
+        
+                        @include media-breakpoint-down(sm) {
+                            @include font-format(22px, 1.2);
+                        }
+                    }
+
+                    h3 {
+                        @include global-font;
+                        @include font-format(16px, 1.2);
+                        font-weight: 600;
+
+                        @include media-breakpoint-down(sm) {
+                            @include font-format(14px, 1.2);
+                        }
+                    }
+
+                    p {
+                        @include global-font;
+                        @include font-format(16px, 1.2);
+                        font-weight: 400;
+                        color: #000;
+
+                        @include media-breakpoint-down(sm) {
+                            @include font-format(14px, 1.2);
+                        }
+                    }
+
+                    ul {
+                        display: flex;
+                        list-style: none;
+                        gap: 10px;
+                        margin-top: 10px;
+
+                        i {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+
+        .home-hero {
+
+            &.contact-us {
+
+                .inner {
+
+                   & > .row {
+                        flex-direction: column !important;
+
+                        .details {
+                            padding: 0;
+                            margin-top: 30px;
+
+                            .head {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
